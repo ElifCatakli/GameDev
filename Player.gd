@@ -1,10 +1,14 @@
 extends KinematicBody2D
 
 const speed = 400
-const jump = -600
+const jump = -550
 const gravity = 20
 const UP = Vector2(0, -1)
+#n a boolean context, a Vector2 will evaluate to false if it's equal to Vector2(0, 0). 
+#Otherwise, a Vector2 will always evaluate to true
+#can be used to represent positions in 2D space or any other pair of numeric values.
 
+var coins = 0
 var motion = Vector2()
 
 func _physics_process(delta):
@@ -22,3 +26,7 @@ func _physics_process(delta):
 			motion.y = jump
 
 	motion = move_and_slide(motion, UP)
+
+func GetCoin():
+	coins+=1
+	print(coins)

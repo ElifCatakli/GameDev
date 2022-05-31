@@ -1,0 +1,592 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://tile1.png" type="Texture" id=2]
+[ext_resource path="res://pfeilnachrechts.png" type="Texture" id=3]
+[ext_resource path="res://pfeillinks.png" type="Texture" id=4]
+[ext_resource path="res://coins.tscn" type="PackedScene" id=6]
+[ext_resource path="res://gelberRand.png" type="Texture" id=7]
+[ext_resource path="res://Gluehbirne.tscn" type="PackedScene" id=8]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "tile1.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[node name="Level1" type="Node2D"]
+position = Vector2( 1, 0 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+format = 1
+tile_data = PoolIntArray( -1179648, 0, 0, -1179647, 0, 0, -1179646, 0, 0, -1179645, 0, 0, -1179644, 0, 0, -1179643, 0, 0, -1179642, 0, 0, -1179641, 0, 0, -1179640, 0, 0, -1179639, 0, 0, -1179638, 0, 0, -1179637, 0, 0, -1179636, 0, 0, -1179635, 0, 0, -1179634, 0, 0, -1179633, 0, 0, -1179632, 0, 0, -1179631, 0, 0, -1179630, 0, 0, -1179629, 0, 0, -1179628, 0, 0, -1179627, 0, 0, -1179626, 0, 0, -1179625, 0, 0, -1179624, 0, 0, -1179623, 0, 0, -1179622, 0, 0, -1179621, 0, 0, -1179620, 0, 0, -1179619, 0, 0, -1179618, 0, 0, -1179617, 0, 0, -1179616, 0, 0, -1179615, 0, 0, -1179614, 0, 0, -1179613, 0, 0, -1179612, 0, 0, -1179611, 0, 0, -1179610, 0, 0, -1179609, 0, 0, -1179608, 0, 0, -1179607, 0, 0, -1179606, 0, 0, -1179605, 0, 0, -1179604, 0, 0, -1114112, 0, 0, -1114068, 0, 0, -1048576, 0, 0, -1048532, 0, 0, -983040, 0, 0, -982996, 0, 0, -917504, 0, 0, -917460, 0, 0, -851968, 0, 0, -851924, 0, 0, -786432, 0, 0, -786388, 0, 0, -720896, 0, 0, -720852, 0, 0, -655360, 0, 0, -655316, 0, 0, -589824, 0, 0, -589823, 0, 0, -589822, 0, 0, -589821, 0, 0, -589804, 0, 0, -589803, 0, 0, -589802, 0, 0, -589801, 0, 0, -589784, 0, 0, -589783, 0, 0, -589780, 0, 0, -524288, 0, 0, -524285, 0, 0, -524284, 0, 0, -524283, 0, 0, -524272, 0, 0, -524271, 0, 0, -524270, 0, 0, -524269, 0, 0, -524268, 0, 0, -524265, 0, 0, -524264, 0, 0, -524263, 0, 0, -524262, 0, 0, -524261, 0, 0, -524260, 0, 0, -524244, 0, 0, -458752, 0, 0, -458747, 0, 0, -458746, 0, 0, -458724, 0, 0, -458723, 0, 0, -458709, 0, 0, -458708, 0, 0, -393216, 0, 0, -393210, 0, 0, -393188, 0, 0, -393187, 0, 0, -393186, 0, 0, -393172, 0, 0, -327680, 0, 0, -327674, 0, 0, -327673, 0, 0, -327672, 0, 0, -327671, 0, 0, -327670, 0, 0, -327669, 0, 0, -327668, 0, 0, -327667, 0, 0, -327666, 0, 0, -327665, 0, 0, -327664, 0, 0, -327663, 0, 0, -327662, 0, 0, -327661, 0, 0, -327660, 0, 0, -327659, 0, 0, -327658, 0, 0, -327657, 0, 0, -327656, 0, 0, -327655, 0, 0, -327654, 0, 0, -327653, 0, 0, -327652, 0, 0, -327651, 0, 0, -327650, 0, 0, -327649, 0, 0, -327648, 0, 0, -327647, 0, 0, -327646, 0, 0, -327645, 0, 0, -327644, 0, 0, -327643, 0, 0, -327642, 0, 0, -327641, 0, 0, -327640, 0, 0, -327636, 0, 0, -262144, 0, 0, -262100, 0, 0, -196608, 0, 0, -196567, 0, 0, -196564, 0, 0, -131072, 0, 0, -131029, 0, 0, -131028, 0, 0, -65536, 0, 0, -65492, 0, 0, 0, 0, 0, 40, 0, 0, 41, 0, 0, 44, 0, 0, 65536, 0, 0, 65580, 0, 0, 131072, 0, 0, 131115, 0, 0, 131116, 0, 0, 196608, 0, 0, 196652, 0, 0, 262144, 0, 0, 262184, 0, 0, 262185, 0, 0, 262188, 0, 0, 327680, 0, 0, 327724, 0, 0, 393216, 0, 0, 393237, 0, 0, 393238, 0, 0, 393239, 0, 0, 393259, 0, 0, 393260, 0, 0, 458752, 0, 0, 458793, 0, 0, 458794, 0, 0, 458795, 0, 0, 458796, 0, 0, 524288, 0, 0, 524305, 0, 0, 524306, 0, 0, 524327, 0, 0, 524328, 0, 0, 524329, 0, 0, 524330, 0, 0, 524331, 0, 0, 524332, 0, 0, 589824, 0, 0, 589833, 0, 0, 589834, 0, 0, 589841, 0, 0, 589842, 0, 0, 589863, 0, 0, 589864, 0, 0, 589865, 0, 0, 589866, 0, 0, 589867, 0, 0, 589868, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655386, 0, 0, 655387, 0, 0, 655388, 0, 0, 655389, 0, 0, 655390, 0, 0, 655391, 0, 0, 655392, 0, 0, 655393, 0, 0, 655394, 0, 0, 655395, 0, 0, 655396, 0, 0, 655397, 0, 0, 655398, 0, 0, 655399, 0, 0, 655400, 0, 0, 655401, 0, 0, 655402, 0, 0, 655403, 0, 0, 655404, 0, 0 )
+
+[node name="RobbyX67Z" parent="." instance=ExtResource( 1 )]
+position = Vector2( -174, 108 )
+
+[node name="Pfeil" type="Sprite" parent="."]
+position = Vector2( 1190, 494 )
+rotation = -0.460767
+texture = ExtResource( 3 )
+
+[node name="Pfeillinks" type="Sprite" parent="."]
+position = Vector2( 2503, -341 )
+texture = ExtResource( 4 )
+
+[node name="Gluehbirnen" type="Node" parent="."]
+
+[node name="coins" parent="Gluehbirnen" instance=ExtResource( 6 )]
+position = Vector2( 1185, -232 )
+
+[node name="coins2" parent="Gluehbirnen" instance=ExtResource( 6 )]
+position = Vector2( 1273, -232 )
+
+[node name="coins4" parent="Gluehbirnen" instance=ExtResource( 6 )]
+position = Vector2( 1480, -896 )
+
+[node name="coins3" parent="Gluehbirnen" instance=ExtResource( 6 )]
+position = Vector2( 1328, -896 )
+
+[node name="coins5" parent="Gluehbirnen" instance=ExtResource( 6 )]
+position = Vector2( 1192, -896 )
+
+[node name="coins6" parent="Gluehbirnen" instance=ExtResource( 6 )]
+position = Vector2( 1056, -896 )
+
+[node name="coins7" parent="Gluehbirnen" instance=ExtResource( 6 )]
+position = Vector2( 904, -896 )
+
+[node name="GelberRand" type="Sprite" parent="."]
+position = Vector2( 480.071, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand6" type="Sprite" parent="."]
+position = Vector2( 159, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand7" type="Sprite" parent="."]
+position = Vector2( 223, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand8" type="Sprite" parent="."]
+position = Vector2( 287, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand9" type="Sprite" parent="."]
+position = Vector2( 351, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand10" type="Sprite" parent="."]
+position = Vector2( 415, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand11" type="Sprite" parent="."]
+position = Vector2( 479, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand12" type="Sprite" parent="."]
+position = Vector2( 543, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand13" type="Sprite" parent="."]
+position = Vector2( 671, 584 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand15" type="Sprite" parent="."]
+position = Vector2( 1183, 520 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand23" type="Sprite" parent="."]
+position = Vector2( 1695, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand27" type="Sprite" parent="."]
+position = Vector2( 2335, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand37" type="Sprite" parent="."]
+position = Vector2( 2591, 520 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand41" type="Sprite" parent="."]
+position = Vector2( 2783, 392 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand44" type="Sprite" parent="."]
+position = Vector2( 2591, 8.00003 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand45" type="Sprite" parent="."]
+position = Vector2( 2655, 8 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand49" type="Sprite" parent="."]
+position = Vector2( 2335, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand56" type="Sprite" parent="."]
+position = Vector2( 1503, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand67" type="Sprite" parent="."]
+position = Vector2( 1055, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand74" type="Sprite" parent="."]
+position = Vector2( 991, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand75" type="Sprite" parent="."]
+position = Vector2( 927, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand76" type="Sprite" parent="."]
+position = Vector2( 863, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand77" type="Sprite" parent="."]
+position = Vector2( 799, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand78" type="Sprite" parent="."]
+position = Vector2( 735, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand93" type="Sprite" parent="."]
+position = Vector2( 287, -504 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand96" type="Sprite" parent="."]
+position = Vector2( 287, -504 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand97" type="Sprite" parent="."]
+position = Vector2( 95.0001, -568 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand98" type="Sprite" parent="."]
+position = Vector2( 159, -568 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand99" type="Sprite" parent="."]
+position = Vector2( 223, -568 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand94" type="Sprite" parent="."]
+position = Vector2( 351, -504 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand95" type="Sprite" parent="."]
+position = Vector2( 415, -440 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand68" type="Sprite" parent="."]
+position = Vector2( 1119, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand69" type="Sprite" parent="."]
+position = Vector2( 1183, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand70" type="Sprite" parent="."]
+position = Vector2( 1247, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand71" type="Sprite" parent="."]
+position = Vector2( 1311, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand72" type="Sprite" parent="."]
+position = Vector2( 1375, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand73" type="Sprite" parent="."]
+position = Vector2( 1439, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand57" type="Sprite" parent="."]
+position = Vector2( 1567, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand58" type="Sprite" parent="."]
+position = Vector2( 1631, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand59" type="Sprite" parent="."]
+position = Vector2( 1695, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand60" type="Sprite" parent="."]
+position = Vector2( 1759, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand61" type="Sprite" parent="."]
+position = Vector2( 1951, -376 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand79" type="Sprite" parent="."]
+position = Vector2( 1055, -504 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand80" type="Sprite" parent="."]
+position = Vector2( 1119, -504 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand81" type="Sprite" parent="."]
+position = Vector2( 1247, -504 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand82" type="Sprite" parent="."]
+position = Vector2( 1311, -568 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand83" type="Sprite" parent="."]
+position = Vector2( 1183, -504 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand84" type="Sprite" parent="."]
+position = Vector2( 1375, -568 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand85" type="Sprite" parent="."]
+position = Vector2( 1439, -568 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand86" type="Sprite" parent="."]
+position = Vector2( 1503, -568 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand87" type="Sprite" parent="."]
+position = Vector2( 1567, -504 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand88" type="Sprite" parent="."]
+position = Vector2( 1631, -504 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand89" type="Sprite" parent="."]
+position = Vector2( 1695, -504 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand90" type="Sprite" parent="."]
+position = Vector2( 1759, -504 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand91" type="Sprite" parent="."]
+position = Vector2( 1823, -504 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand92" type="Sprite" parent="."]
+position = Vector2( 1887, -440 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand62" type="Sprite" parent="."]
+position = Vector2( 2015, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand63" type="Sprite" parent="."]
+position = Vector2( 2079, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand64" type="Sprite" parent="."]
+position = Vector2( 2143, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand65" type="Sprite" parent="."]
+position = Vector2( 2207, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand66" type="Sprite" parent="."]
+position = Vector2( 2271, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand50" type="Sprite" parent="."]
+position = Vector2( 2399, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand51" type="Sprite" parent="."]
+position = Vector2( 2463, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand52" type="Sprite" parent="."]
+position = Vector2( 2527, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand102" type="Sprite" parent="."]
+position = Vector2( 2783, -440 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand100" type="Sprite" parent="."]
+position = Vector2( 2655, -568 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand101" type="Sprite" parent="."]
+position = Vector2( 2591, -568 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand53" type="Sprite" parent="."]
+position = Vector2( 2591, -312 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand54" type="Sprite" parent="."]
+position = Vector2( 2655, -184 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand55" type="Sprite" parent="."]
+position = Vector2( 2783, -120 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand46" type="Sprite" parent="."]
+position = Vector2( 2783, 136 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand47" type="Sprite" parent="."]
+position = Vector2( 2591, 264 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand48" type="Sprite" parent="."]
+position = Vector2( 2655, 264 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand42" type="Sprite" parent="."]
+position = Vector2( 2719, 456 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand43" type="Sprite" parent="."]
+position = Vector2( 2655, 456 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand38" type="Sprite" parent="."]
+position = Vector2( 2527, 520 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand39" type="Sprite" parent="."]
+position = Vector2( 2463, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand40" type="Sprite" parent="."]
+position = Vector2( 2399, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand28" type="Sprite" parent="."]
+position = Vector2( 2271, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand29" type="Sprite" parent="."]
+position = Vector2( 2207, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand30" type="Sprite" parent="."]
+position = Vector2( 2143, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand31" type="Sprite" parent="."]
+position = Vector2( 2079, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand32" type="Sprite" parent="."]
+position = Vector2( 2015, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand33" type="Sprite" parent="."]
+position = Vector2( 1951, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand34" type="Sprite" parent="."]
+position = Vector2( 1887, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand35" type="Sprite" parent="."]
+position = Vector2( 1823, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand36" type="Sprite" parent="."]
+position = Vector2( 1759, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand24" type="Sprite" parent="."]
+position = Vector2( 1503, 392 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand25" type="Sprite" parent="."]
+position = Vector2( 1439, 392 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand26" type="Sprite" parent="."]
+position = Vector2( 1375, 392 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand16" type="Sprite" parent="."]
+position = Vector2( 1119, 520 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand17" type="Sprite" parent="."]
+position = Vector2( 1055, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand18" type="Sprite" parent="."]
+position = Vector2( 991, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand19" type="Sprite" parent="."]
+position = Vector2( 927, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand20" type="Sprite" parent="."]
+position = Vector2( 863, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand21" type="Sprite" parent="."]
+position = Vector2( 799, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand22" type="Sprite" parent="."]
+position = Vector2( 735, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand14" type="Sprite" parent="."]
+position = Vector2( 607, 584 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand5" type="Sprite" parent="."]
+position = Vector2( 95, 648 )
+scale = Vector2( 0.187452, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand2" type="Sprite" parent="."]
+position = Vector2( 543, -312 )
+scale = Vector2( 0.193939, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand4" type="Sprite" parent="."]
+position = Vector2( 671, -312 )
+scale = Vector2( 0.193939, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="GelberRand3" type="Sprite" parent="."]
+position = Vector2( 607, -312 )
+scale = Vector2( 0.193939, 0.118369 )
+texture = ExtResource( 7 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Gluehbirne" parent="CanvasLayer" instance=ExtResource( 8 )]
