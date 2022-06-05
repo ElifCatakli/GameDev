@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="RobbyX67Z"
-run/main_scene="res://Level1.tscn"
+run/main_scene="res://Level3.tscn"
 boot_splash/fullsize=false
 config/icon="res://icon.png"
 
@@ -19,6 +19,7 @@ config/icon="res://icon.png"
 
 Coin="res://Coin.gd"
 Global1="*res://Global_1.gd"
+LebenCounter="*res://LebenCounter.gd"
 
 [display]
 
