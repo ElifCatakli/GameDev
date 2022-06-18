@@ -1,3 +1,3 @@
 # GameDevelopment 
 
-In diesem Repository finden Sie Dateien, die ich mit meiner Kommilitonin auf der Spiel-Engine Godot entwickelt habe. 
+Ein Jump'n Run Spiel, welches auf der Spiel-Engine Godot entwickelt wurde. 
